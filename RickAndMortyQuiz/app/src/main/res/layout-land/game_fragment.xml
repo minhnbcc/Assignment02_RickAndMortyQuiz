@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".game.GameFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/rick_and_morty_image"
+                android:src="@drawable/rnm02"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+            <ImageView
+                android:id="@+id/rightImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/right_image"
+                android:src="@drawable/right_24"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.826" />
+
+            <ImageView
+                android:id="@+id/wrongone"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/wrong_image"
+                android:src="@drawable/wrong_24"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.826" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                app:layout_constraintVertical_bias="0.58000004">
+
+                <ImageButton
+                    android:id="@+id/iBtnPrev"
+                    android:layout_width="70dp"
+                    android:layout_height="47dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/previous_button"
+                    android:src="@drawable/ic_baseline_navigate_before_24" />
+
+                <RadioButton
+                    android:id="@+id/RdoTrue"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:text="@string/trues"
+                    android:textAlignment="textStart" />
+
+                <RadioButton
+                    android:id="@+id/RdoFalse"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:text="@string/falsing" />
+
+                <ImageButton
+                    android:id="@+id/iBtnNext"
+                    android:layout_width="70dp"
+                    android:layout_height="47dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/next_button"
+                    android:src="@drawable/ic_baseline_navigate_next_24" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtDisplay"
+                android:layout_width="728dp"
+                android:layout_height="96dp"
+                android:textSize="30sp"
+                app:layout_constraintTop_toTopOf="@+id/scrollView2"
+                tools:layout_editor_absoluteX="3dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>
